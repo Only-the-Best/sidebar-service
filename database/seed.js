@@ -12,7 +12,7 @@ for(var i = 0; i < 100; i++){
     "imageUrl": faker.image.avatar(),
     "rating": Math.floor(Math.random() * (5 - 1) + 1),
     "phone": faker.phone.phoneNumber(),
-    "sales": Math.floor(Math.random() * (1000000 - 100000) + 100000) 
+    "sales": Math.floor(Math.random() * (100 - 0) + 0) 
   })
 }
 

@@ -16,26 +16,39 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/sidebar').then(posts => {
+    console.log('are you mounting');
+    let sideId = Number(window.location.pathname.replace(/\//, ''));
+    if(sideId === 1){
+      axios.get(`/api/sidebar/${sideId}`).then(posts => {
+        this.setState({
+          topBar: posts.data[0],
+          botBar: posts.data[1]
+        })
+        console.log('this is the topbar', this.state.topBar);
+      })
+    } 
+    axios.get(`/api/sidebar/${sideId}`).then(posts => {
       this.setState({
         topBar: posts.data[0],
         botBar: posts.data[1]
       })
-      console.log('topBar', this.state.topBar);
-      console.log('botBar', this.state.botBar)
+      console.log(this.state.topBar);
     })
   }
 
+
+
   render() {
-    return ( 
-      <div>
-        <aside id="ASIDE_1">
-          <div id="DIV_2">
-            <TopBar />
-          </div>
-        </aside>
-      </div>
-    )
+      return ( 
+        <div>
+          <aside id="ASIDE_1">
+            <div id="DIV_2">
+              <TopBar topInfo={this.state.topBar}/>
+            </div>
+          </aside>
+        </div>
+      )
+    
   }
 }
 

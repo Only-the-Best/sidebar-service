@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "eslint-config-prettier": "^3.1.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "mongodb": "^3.1.8",
@@ -36,7 +37,9 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "jest": "^23.6.0",
     "webpack": "^4.23.1",

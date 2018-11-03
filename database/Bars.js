@@ -28,20 +28,48 @@ const bottomBarSchema = new mongoose.Schema(
 const TopBar = mongoose.model("TopBar", topBarSchema);
 const BottomBar = mongoose.model("BottomBar", bottomBarSchema);
 
-let getInfo = res => {
+let getInfo = (req,res) => {
     TopBar.find({})
         .exec()
-        .then( item => {
+        .then( item => {           
             BottomBar.find({})
             .exec()
             .then(bot => {
-            var combineBars = [item, bot]
+                var combineBars = [item, bot]                
+                if(req === '1'){
+                    var shortItem = item.slice(0,4);
+                    var shortBot = bot.slice(0,4);
+                    combineBars = [shortItem, shortBot]
+                    res.send(combineBars);
+                } 
+            console.log('combineBars', combineBars);
             res.send(combineBars)
             })
         }
     )
 }
 
+let getOne = (req, res) => {
+    TopBar.find({})
+    .exec()
+    .then( item => {
+        BottomBar.find({})
+        .exec()
+        .then(bot => {
+            var page = req.params.page;
+            if(page === '1'){
+                var shortItem = item.slice(0,4);
+                var shortBot = bot.slice(0,4);
+                var combineBars = [shortItem, shortBot]
+                console.log('combine', combineBars);
+                res.sendFile(page.join(`${__dirname}/../dist/index.html`));
+            }
+
+        })
+    })
+}
+
 module.exports.getInfo = getInfo;
 module.exports.TopBar = TopBar;
 module.exports.BottomBar = BottomBar;
+module.exports.getOne = getOne;

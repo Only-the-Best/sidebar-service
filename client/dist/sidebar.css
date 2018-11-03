@@ -211,12 +211,14 @@ img {
 }
 
 .agent-pic {
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
 }
 
 .agent-img {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 12px;
 }
 
 .sig-info {
