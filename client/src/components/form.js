@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 var starImg = [];
 
 var startList= function() {
@@ -96,6 +97,7 @@ const TopBar = props => (
                                             (<a href='#' className='ratings-num'>{props.topInfo[Math.floor(Math.random() * props.topInfo.length)].rating}</a>)
                                         </span>
                                     </span>
+                            
                                     <span className='recent-sales'>
                                         <a href='#' className='profile-link'>
                                             <span className='sales-count'>{props.topInfo[Math.floor(Math.random() * props.topInfo.length)].sales}</span>
@@ -104,15 +106,12 @@ const TopBar = props => (
                                     </span>
                                     <span className='phone-num'>{props.topInfo[Math.floor(Math.random() * props.topInfo.length)].phone}</span>
                                 </div>                           
-                                {/* <div className='sig-aside'> */}
                                     <span className='agent-badge'>
                                         Listing Agent
                                     </span>
-                                {/* </div> */}
                             </div>                                                      
                     ))}
                 </div>   
-                {/* </div>                 */}
             </form>
         </div>
     </article>

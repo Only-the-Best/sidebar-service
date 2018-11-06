@@ -6,28 +6,30 @@
     text-decoration: none solid rgb(68, 68, 68);
     text-size-adjust: 100%;
     vertical-align: top;
-
+    /* padding-left: 10px;
+    padding-right: 5px; */
     width: 300px;
     column-rule-color: rgb(68, 68, 68);
     perspective-origin: 150px 2729.37px;
     transform-origin: 150px 2729.37px;
     caret-color: rgb(68, 68, 68);
-    border: 0px none rgb(68, 68, 68);
     font: normal normal 400 normal 15px / 22.5px Gotham, gotham, Verdana, sans-serif;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 50px;
     outline: rgb(68, 68, 68) none 0px;
 }
 /*#ASIDE_1*/
 
 #ARTICLE_3 {
-    height: 777.614px;
+    height: auto;
     text-size-adjust: 100%;
     width: 300px;
     column-rule-color: rgb(68, 68, 68);
     perspective-origin: 150px 388.8px;
     transform-origin: 150px 388.8px;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 0px none rgb(68, 68, 68);
+    padding-left: 10px;
+    padding-right: 5px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #0074e4;
     margin: -0px 0px 15px;
     font-weight: 700;
     font-size: 13px;
@@ -115,17 +117,15 @@ hr.separator {
 }
 
 #recipients {
-    border: 1px solid #03c04a;
     width: 500px;
-    display: flex-inline;
-    height: 63px;
+    display: flex;
+    height: 80px;
     box-sizing: border-box;
     /* display: block; */
     font-family: Gotham,gotham,Verdana,sans-serif;
 }
 
 .sig-content {
-    border: 1px solid #0074e4;
     height: 63px;
     line-height: 1em;
     margin-bottom: 10px;
@@ -222,7 +222,6 @@ img {
 }
 
 .sig-info {
-    overflow: hidden;
     display: inline;
     margin: 0 !important;
     padding: 0;
@@ -250,6 +249,7 @@ img {
 
 .display-rating {
     font-size: .866667rem;
+    width: 150px;
     display: flex;
     line-height: 1em;
     vertical-align: top;
@@ -287,7 +287,7 @@ img {
 
 .recent-sales {
     font-size: .73333rem;
-    display: inline;
+    display: block;
     height: 15px;
     color: #444;
     box-sizing: border-box;
@@ -345,7 +345,18 @@ img {
     border-radius: 2px;
     border: 1px solid #eee;
     color: #aaa;
+    height: 20px;
+}
 
+/* Bot ...................................................... */
+
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#nearby-homes {
+    font-size: 20px;
 }
 
 /* #DIV_4, #SECTION_6 {

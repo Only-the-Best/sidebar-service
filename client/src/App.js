@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./components/sideBar.js";
 import TopBar from "./components/form.js";
+import SoldHomes from './components/botForm.js';
 import ReactDOM from 'react-dom';
 import axios from "axios";
 
@@ -44,6 +45,7 @@ export default class App extends React.Component {
           <aside id="ASIDE_1">
             <div id="DIV_2">
               <TopBar topInfo={this.state.topBar}/>
+              <SoldHomes botInfo={this.state.botBar}/>
             </div>
           </aside>
         </div>
