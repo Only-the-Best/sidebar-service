@@ -1,17 +1,53 @@
 {
-  "name": "",
-  "version": "",
+  "name": "sidebar",
+  "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "James",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest --config ./jest.config.js",
+    "react-dev": "webpack -d --mode development --watch",
+    "start": "nodemon server/index.js",
+    "db-setup": "node database/seed.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "eslint-config-prettier": "^3.1.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.8",
+    "nodemon": "^1.18.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "sinon": "^7.1.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "jest": "^23.6.0",
+    "mongodb-memory-server": "^2.6.2",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>client/src/setupTests.js"
   }
 }
