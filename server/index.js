@@ -5,7 +5,7 @@ const cors = require('express');
 const Bars = require('../database/Bars.js');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = 3002;
 
 // app.use(cors());
 app.use(bodyParser.json());

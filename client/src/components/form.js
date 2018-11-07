@@ -5,10 +5,10 @@ var starImg = [];
 
 var startList= function() {
     for( var i = 0; i < 3; i++) {
-        starImg.push(<img className='agent-img' src={require('./tempsnip.png')} alt='stars'></img>) 
+        starImg.push(<img className='agent-img' src='https://s3-us-west-1.amazonaws.com/sidebar-side/tempsnip.png' alt='stars'></img>) 
     }
     for(var j = 0; j < 2; j++) {
-        starImg.push(<img className='agent-img' src={require('./tempsnip2.png')} alt='stars'></img>)
+        starImg.push(<img className='agent-img' src='https://s3-us-west-1.amazonaws.com/sidebar-side/tempsnip2.png' alt='stars'></img>)
     }
 }
 startList();
